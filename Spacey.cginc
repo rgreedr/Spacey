@@ -106,7 +106,7 @@ inline fixed4 thc_world_to_clip_position(float3 worldPosition)
     return screenPosition;
 }
 
-inline fixed2 thc_world_to_screen_position2(float3 worldPosition)
+inline fixed2 thc_world_to_screen_position(float3 worldPosition)
 {
     float4 clipPosition = mul(UNITY_MATRIX_VP, float4(worldPosition, 1.0));
     float4 screenPosition = ComputeScreenPos(clipPosition);
